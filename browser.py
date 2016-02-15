@@ -3,7 +3,7 @@ from urllib.parse import urlparse
 
 class Browser(threading.Thread):
     '''
-    A virtual Web user that browses a given list of Web sites
+    A virtual Web user that browses a given Python list of Web sites
     more or less randomly
     '''
     # A list of user-agents from which Browser agents will pick
