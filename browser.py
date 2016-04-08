@@ -1,3 +1,7 @@
+# This script requires a third-party library: requests
+# To install this library:
+# sudo apt-get update; sudo apt-get install python3-requests
+#
 import requests, re, random, time, threading, sys
 from urllib.parse import urlparse
 
@@ -114,9 +118,15 @@ class Browser(threading.Thread):
             # Now decide what to do based on the number we picked above
             # Do we visit a link found on the current page?
             if chance <= Browser.prob_next and len(self.navlinks) > 0:
-                # Don't choose the page we're currently on
+                # Don't choose the page we're currently on                                                                                                                           
                 if path in self.navlinks:
                     self.navlinks.remove(path)
+                pick = random.choice(self.navlinks)
+                if 'http' not in pick:
+                    o = urlparse(url)
+                    new_url = o.netloc + '/' + pick
+                else:
+                    new_url = pick
                 # These external links will soon (hopefully) be gone    
                 elif 'http://browsehappy.com/' in self.navlinks:
                     self.navlinks.remove('http://browsehappy.com/')
