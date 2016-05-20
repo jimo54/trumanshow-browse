@@ -63,7 +63,10 @@ class Browser(threading.Thread):
         '''
         # Pick a random URL from the list
         domain = random.choice(self.urls)
-        url = 'http://' + domain + '/'
+        if 'http' not in domain:
+            url = 'http://' + domain + '/'
+        else:
+            url = domain
         wait = False
         # Check whether the stopEvent has been set
         # each time through the loop
@@ -129,9 +132,6 @@ class Browser(threading.Thread):
                     new_url = o.netloc + '/' + pick
                 else:
                     new_url = pick
-                # These external links will soon (hopefully) be gone    
-                elif 'http://browsehappy.com/' in self.navlinks:
-                    self.navlinks.remove('http://browsehappy.com/')
                 # Now, pick a link to visit
                 new_url = random.choice(self.navlinks)
                 # This is for local links, to add the FQDN

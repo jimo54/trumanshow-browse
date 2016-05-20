@@ -31,7 +31,7 @@ def main(num_agents, urls=None):
 
 if __name__=='__main__':
     parser = ArgumentParser(description='Randomly browse a given list of URLs using a number of probability-driven Browser agents')
-    parser.add_argument('urls', nargs='?', default=None, help='A Python list of URLs to browse (default: %(default)s)')
+    parser.add_argument('urls', nargs='*', default=None, help='A Python list of URLs to browse (default: %(default)s)')
     parser.add_argument('-n', '--num_agents', type=int, default=10, help='Number of browser agents (default: %(default)s)')
     args = parser.parse_args()
     main(args.num_agents, args.urls)
