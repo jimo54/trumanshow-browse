@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
+# browser.py
 # This script requires a third-party library: requests
-# To install this library:
+# To install this library on Ubuntu 14.04::
 # sudo apt-get update; sudo apt-get install python3-requests
 #
 import requests, re, random, time, threading, sys
