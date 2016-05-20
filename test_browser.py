@@ -1,10 +1,11 @@
+#/usr/bin/env python3
 import threading, sys, time
 from browser import Browser
 from argparse import ArgumentParser
 
 def main(num_agents, urls=None):
     # The list of URLs for agents to visit. These are for Jim's home network 
-    # and must therefore be replaced to run on the range.
+    # and must therefore be replaced to run on Betaport.
     if urls == None:
         urls = ['betaport.26maidenlane.net', 'betabank.26maidenlane.net', 'tncc.26maidenlane.net', 'pots.26maidenlane.net', 'gh.26maidenlane.net', 'pha.26maidenlane.net', 'dantes.26maidenlane.net', 'cfa.26maidenlane.net','wbpr.26maidenlane.net']
     # A list of browsing-agent threads
@@ -34,4 +35,3 @@ if __name__=='__main__':
     parser.add_argument('-n', '--num_agents', type=int, default=10, help='Number of browser agents (default: %(default)s)')
     args = parser.parse_args()
     main(args.num_agents, args.urls)
-    
