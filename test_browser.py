@@ -8,7 +8,7 @@ def main(num_agents, urls):
     if urls == []:
         with open('urls.txt') as f:
             for line in f.readlines():
-                if line.startswith('#'):
+                if line.startswith('#') or line.startswith(';'):
                     continue
                 urls.append(line.strip())
     # A list of browsing-agent threads
