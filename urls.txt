@@ -1,0 +1,11 @@
+# Specify the top-level URLs to be visited
+# by the agent threads below, one per line 
+betaport.26maidenlane.net
+betabank.26maidenlane.net
+tncc.26maidenlane.net
+pots.26maidenlane.net
+gh.26maidenlane.net
+pha.26maidenlane.net
+dantes.26maidenlane.net
+cfa.26maidenlane.net
+wbpr.26maidenlane.net
