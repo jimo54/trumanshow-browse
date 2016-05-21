@@ -123,7 +123,7 @@ class Browser(threading.Thread):
             # Now decide what to do based on the number we picked above
             # Do we visit a link found on the current page?
             if chance <= Browser.prob_next and len(self.navlinks) > 0:
-                # Don't choose the page we're currently on                                                                                                                           
+                # Don't choose the page we're currently on
                 if path in self.navlinks:
                     self.navlinks.remove(path)
                 pick = random.choice(self.navlinks)
@@ -156,7 +156,7 @@ class Browser(threading.Thread):
             self.history.append(url)
             url = new_url
             # Add the scheme up front for local links
-            if 'http://' not in url:
+            if 'http' not in url:
                 url = 'http://' + url
         # If we've left the loop, it's time to go home
         print('{} {:>10s}: Stop event has been set. I\'m outta here!'.format(time.strftime("%H:%M:%S"), self.whoami))
