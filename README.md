@@ -22,6 +22,6 @@ Before running the test_browser.py script, it is necessary to specify a list of 
 
 ```python3 test_browser.py 'betaport.26maidenlane.net' 'betabank.26maidenlane.net' 'tncc.26maidenlane.net' 'pots.26maidenlane.net' 'gh.26maidenlane.net' 'pha.26maidenlane.net' 'dantes.26maidenlane.net' 'cfa.26maidenlane.net' 'wbpr.26maidenlane.net'```
 
-The number of agent threads may also be specified at run time with the optional -n argument. The default number of agent threads is 10. To run the script with 25 agent threads, for example, with the list of URLs to be visited hard-coded in the test_browser.py script:
+The number of agent threads may also be specified at run time with the optional -n argument. The default number of agent threads is 10. To run the script with 25 agent threads, for example, with the list of URLs to be visited given in the urls.txt file:
 
 ```python3 test_browser.py -n 25```
