@@ -2,6 +2,8 @@
 A tool that generates Web browsing traffic using virtual Web user threads that browse a given list of Web sites more or less randomly, using randomly-selected user-agent strings.
 
 ## Files ##
+**README.md:** This file
+
 **browser.py:** A class (Browser) that defines a virtual Web user
 
 **test_browser.py:** The driver script
