@@ -1,5 +1,5 @@
 # trumanshow-browser
-A tool that generates Web browsing traffic using virtual Web user threads that browse a given list of Web sites more or less randomly, using randomly-selected user-agent strings.
+A tool that generates Web traffic using virtual Web user threads that randomly browse a given list of Web sites.
 
 ## Files ##
 **README.md:** This file
