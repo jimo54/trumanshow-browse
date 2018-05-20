@@ -18,7 +18,7 @@ The Browser class defined in browser.py requires the third-party Requests librar
 
 Otherwise, it is only necessary to copy the two Python scripts to a convenient location on the machine(s) that will serve as platform for the browsers.
 
-## Configuration and Use##
+## Configuration and Use ##
 
 Before running the test_browser.py script, it is necessary to specify a list of URLs to be browsed by the agents. Two possibilities are provided for. The list can be supplied in a local file named urls.txt, containing one URL per line. (An example urls.txt file is provided.) Alternatively, a list of URLs can be specified as a commandline argument at run time:
 
